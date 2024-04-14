@@ -1,17 +1,25 @@
+import { useState } from 'react'
+
 //Modelo clássico
 import Banner from './componentes/Banner/Banner';
+import Formulario from './componentes/Formulario';
 
-//Com o index.js que faz o meio campo
-import CampoTexto from './componentes/CampoTexto';
 
 function App() {
+
+  const [colaboradores, setColaboradores] = useState([]);
+
+  const aoNovoColaboradorAdicionado = (colaborador) => {
+    console.log(colaborador)
+    //Separa todos os colaboradores que existem em um novo array e adiciona o colaborador no final
+    setColaboradores([...colaboradores,colaborador])
+  }
+
   return (
     <div className="App">
       <Banner />
-      <CampoTexto label="Nome" placeholder="Digite seu nome"/>
-      <CampoTexto label="Cargo" placeholder="Digite seu cargo"/>
-      <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem"/>
-    </div>
+      <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
+  </div>
   );
 }
 
