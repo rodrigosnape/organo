@@ -1,5 +1,7 @@
 import './Banner.css'
 
+//Modelo mais simples
+//Sem as frescuradas de const e arrow function
 function Banner() {
     return (
         <header className="banner">
