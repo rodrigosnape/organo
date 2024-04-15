@@ -8,7 +8,7 @@ const Formulario = (props) => {
 
     const [nome, setNome] = useState('Rodrigo Veiga')
     const [cargo, setCargo] = useState('Desenvolvedor')
-    const [imagem, setImagem] = useState('FOTO')
+    const [imagem, setImagem] = useState('https://github.com/rodrigosnape.png')
     const [time, setTime] = useState('Programação')
 
     const aoSalvar = (evento) => {
@@ -21,6 +21,10 @@ const Formulario = (props) => {
             imagem,
             time
         })
+        setNome('')
+        setCargo('');
+        setImagem('');
+        setTime('');
     }
 
     return(
