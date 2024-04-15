@@ -51,7 +51,7 @@ function App() {
   const [colaboradores, setColaboradores] = useState([]);
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador)
+    debugger
     //Separa todos os colaboradores que existem em um novo array e adiciona o colaborador no final
     setColaboradores([...colaboradores,colaborador])
   }
